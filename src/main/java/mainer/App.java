@@ -50,7 +50,6 @@ public class App {
         String csrf_id = readKeyValueStringFromJSON("csrf_token", gLogin.getBody().asString());
         String guest_id = readKeyValueStringFromJSON("guest_id", gLogin.getBody().asString());
         System.out.println("csrf_id " + csrf_id);
-        String payload = "{\"products\":[{\"id\":92247807,\"quantity\":1,\"enhancedEcommerceAddToCart\":{\"ecommerce\":{\"add\":{\"products\":[{\"category\":\"Home & Kitchen/Homeware/Furniture/Bedroom Furniture/Beds\",\"name\":\"Postucare Limitless Mattress Only - 2 Comfort Levels\",\"dimension1\":\"Single\",\"price\":3399,\"variant\":null,\"id\":\"PLID68128803\",\"position\":0,\"brand\":\"Postucare\",\"quantity\":1}]},\"currencyCode\":\"ZAR\"},\"event\":\"addToCart\"}}]}";
         String payloader = prop.getProperty("cartitem.payload");
         cartAdd_response = given().
                 when().
